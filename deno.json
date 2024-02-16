@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "build": "deno compile --output dist/tau -A --unstable src/main.ts",
+    "build": "deno compile --output dist/primal -A --unstable src/main.ts",
     "run": "deno run -A --unstable src/main.ts"
   }
 }
