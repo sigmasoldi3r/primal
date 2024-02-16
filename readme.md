@@ -1,6 +1,10 @@
-![](primal.png)
+<p align="center">
+  <img src="primal.png" title="Primal" alt="Primal" width="128">
+</p>
 
-# Primal
+<h1 align="center" style="text-shadow: 0 0 6px 6px black; margin-top: -70px; margin-bottom: 32px; font-size: 4rem;">
+    Primal
+</h1>
 
 A hack-though style development web server, using modern technologies in an old
 fashion.
