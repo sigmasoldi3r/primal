@@ -29,7 +29,7 @@ But as a rule of thumb, you'll use:
 
 An example:
 
-```eta
+```ejs
 <%
 
 const { Database } = await it.require("https://deno.land/x/sqlite3@0.10.0/mod.ts");
