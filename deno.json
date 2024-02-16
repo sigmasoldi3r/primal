@@ -2,5 +2,8 @@
   "tasks": {
     "build": "deno compile --output dist/primal -A --unstable src/main.ts",
     "run": "deno run -A --unstable src/main.ts"
+  },
+  "test": {
+    "include": ["src/**/*.spec.ts"]
   }
 }

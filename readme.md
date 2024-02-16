@@ -1,3 +1,5 @@
+![](primal.png)
+
 # Primal
 
 A hack-though style development web server, using modern technologies in an old
