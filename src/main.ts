@@ -5,6 +5,7 @@ import logger from "https://deno.land/x/oak_logger@1.0.0/mod.ts";
 import { join } from "https://deno.land/std@0.212.0/path/join.ts";
 import * as mrMime from "https://deno.land/x/mrmime@v2.0.0/mod.ts";
 import { extname } from "https://deno.land/std@0.212.0/path/extname.ts";
+import { Session } from "https://deno.land/x/oak_sessions/mod.ts";
 
 const flags = parseArgs(Deno.args, {
   string: ["root", "port"],
@@ -20,6 +21,7 @@ async function handleEta(ctx: Context, pathname = ctx.request.url.pathname) {
   try {
     ctx.response.body = await eta.renderAsync(pathname, {
       ...ctx,
+      Deno,
       require: (t: string) => import(t),
     });
   } catch (e) {
@@ -56,6 +58,7 @@ async function resolveOrStatic(ctx: Context, pathname: string) {
   }
 }
 
+app.use(Session.initMiddleware());
 app.use(logger.logger);
 app.use(async (ctx) => {
   const pathname = ctx.request.url.pathname;
